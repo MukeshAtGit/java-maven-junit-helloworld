@@ -12,17 +12,17 @@ pipeline {
                 stage('Unit Test') {
 
                     steps {
-                        sh 'mvn test' 
+                        sh 'mvn test'
                     }
 
                 }
                 stage('Integration Test') {
 
                     steps {
-                        sh 'mvn verify
-' 
+                        sh 'mvn verify'
                     }
                 }
+            }
         }
         stage('Publish-docker-image') {
             steps {
