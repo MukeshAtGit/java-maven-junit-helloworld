@@ -1,7 +1,4 @@
-pipeline {
-    agent any
-
-    stages {
+node  {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package' 
@@ -29,5 +26,4 @@ pipeline {
                 sh 'docker build . -t mukesh236/java-helloworld-2.0'
             }
         }
-    }
 }
